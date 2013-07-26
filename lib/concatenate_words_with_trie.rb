@@ -63,7 +63,7 @@ private
   def display_results(word, count)
     puts "Longest concatenated word is:\n"
     puts word
-    puts "Total concatenated words is: \n"
+    puts "Total concatenated words is:\n"
     puts count
     return true
   end
