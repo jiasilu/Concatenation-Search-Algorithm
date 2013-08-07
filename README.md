@@ -55,21 +55,21 @@ Once finish searching, the longest concatenated word and the total number of con
   
 4.For the main function - find_concat_words, I use recursive and divide-and-conquer solutions to
   iterate the word from the first character to the last.
-  For example, we've a list of words:
-  "ratcatdog"
-  "rat"
-  "cat"
-  "dog"
 
-  We are scanning "ratcatdog"...
-    'r' -> is not in trie, continue
-    'ra' -> is not in trie, continue
-    'rat' ->  is in tree, (check that 'rat' is not in the hash table, insert {'rat':true} into the table), then check the rest of the word "catdog"
-    'c' -> is not in trie, continue
-    'ca' -> is not in trie, continue
-    'cat' -> is in trie,  (check that 'cat' is not in the hash table, insert {'cat':true} into the table), then check the rest of the word "dog"
-    'd' -> is not in trie, continue
-    'do' -> is not in trie, continue
-    'dog' -> is in trie, (check that 'dog' is not in the hash table, insert {'dog':true} into the table), reach the end, return true and increase total concatenated words count.
+    For example, we've a list of words:
+       "ratcatdog"
+       "rat"
+       "cat"
+       "dog"
+    We are scanning "ratcatdog":
+       'r' -> is not in trie, continue
+       'ra' -> is not in trie, continue
+       'rat' ->  is in tree, (check that 'rat' is not in the hash table, insert {'rat':true} into the table), then        check the rest of the word "catdog"
+       'c' -> is not in trie, continue
+       'ca' -> is not in trie, continue
+       'cat' -> is in trie,  (check that 'cat' is not in the hash table, insert {'cat':true} into the table), then check the rest of the word "dog"
+       'd' -> is not in trie, continue
+       'do' -> is not in trie, continue
+       'dog' -> is in trie, (check that 'dog' is not in the hash table, insert {'dog':true} into the table), reach the end, return true and increase total concatenated words count.
 
 
